@@ -40,7 +40,7 @@
     .bg-decor::before {
       width: 400px;
       height: 400px;
-      background: #000000;
+      background: #c53030;
       top: -100px;
       left: -100px;
     }
@@ -93,7 +93,7 @@
     }
 
     h2 {
-      color: #000000;
+      color: #c53030;
       font-size: 1.75rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
@@ -130,7 +130,7 @@
       width: 40px;
       height: 40px;
       border: 4px solid #e5e5e5;
-      border-top: 4px solid #000000;
+      border-top: 4px solid #c53030;
       border-radius: 50%;
       animation: spin 1s linear infinite;
     }
@@ -173,7 +173,9 @@
   <div class="bg-decor"></div>
   <div class="container">
     <div class="card" id="output">
-      <img src="https://github.com/grafix-studio/sample/blob/main/GFS%20Final.svg" alt="GraFix Studio Logo" class="logo">
+      <a href="https://www.grafixstudio.com">
+        <img src="https://media-hosting.imagekit.io/96a732a22e064bd7/GFS%20Final.svg?Expires=1840994572&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=vNMespXb9pBClqfCmal0SrWiQWEoXTvBXln4KtXihNv6orXUhKDIaxog-Fkr61PiaVhirPKDRdl4ZuNty4SWINdJtUgEOHfJ6sB9gcTwgqG4lQBZmmBJqnsU6MLyvhi~gGcAENQYLWXu5uUE8iGIiG8OExkKtq9lz~eZfwuemhPAAvWoSwZyDqhXj2zisW5MHI21~KWTFLjDESL2KBAaHVJNbZWhmprwuCiXN9DHiKUGPuc311sqAI3XdOK6sB2y-pm4WFAshmxseXnfrPlfBt2-Y3Pc5gkU0jBrkSw~JQ599-f~Fh~rotuuvt0EezL~7ws5n-tLnwT7wzerTuGKAQ__" alt="GraFix Studio Logo" class="logo">
+      </a>
       <h1 class="heading">GraFix Studio</h1>
       <div class="loader">
         <div class="spinner"></div>
@@ -190,7 +192,9 @@
 
     if (!id) {
       output.innerHTML = `
-        <img src="https://github.com/grafix-studio/sample/blob/main/GFS%20Final.svg" alt="GraFix Studio Logo" class="logo">
+        <a href="https://www.grafixstudio.com">
+          <img src="https://media-hosting.imagekit.io/96a732a22e064bd7/GFS%20Final.svg?Expires=1840994572&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=vNMespXb9pBClqfCmal0SrWiQWEoXTvBXln4KtXihNv6orXUhKDIaxog-Fkr61PiaVhirPKDRdl4ZuNty4SWINdJtUgEOHfJ6sB9gcTwgqG4lQBZmmBJqnsU6MLyvhi~gGcAENQYLWXu5uUE8iGIiG8OExkKtq9lz~eZfwuemhPAAvWoSwZyDqhXj2zisW5MHI21~KWTFLjDESL2KBAaHVJNbZWhmprwuCiXN9DHiKUGPuc311sqAI3XdOK6sB2y-pm4WFAshmxseXnfrPlfBt2-Y3Pc5gkU0jBrkSw~JQ599-f~Fh~rotuuvt0EezL~7ws5n-tLnwT7wzerTuGKAQ__" alt="GraFix Studio Logo" class="logo">
+        </a>
         <h1 class="heading">GraFix Studio</h1>
         <p>No certificate ID provided.</p>
       `;
@@ -202,7 +206,9 @@
         })
         .then(data => {
           output.innerHTML = `
-            <img src="https://github.com/grafix-studio/sample/blob/main/GFS%20Final.svg" alt="GraFix Studio Logo" class="logo">
+            <a href="https://www.grafixstudio.com">
+              <img src="https://media-hosting.imagekit.io/96a732a22e064bd7/GFS%20Final.svg?Expires=1840994572&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=vNMespXb9pBClqfCmal0SrWiQWEoXTvBXln4KtXihNv6orXUhKDIaxog-Fkr61PiaVhirPKDRdl4ZuNty4SWINdJtUgEOHfJ6sB9gcTwgqG4lQBZmmBJqnsU6MLyvhi~gGcAENQYLWXu5uUE8iGIiG8OExkKtq9lz~eZfwuemhPAAvWoSwZyDqhXj2zisW5MHI21~KWTFLjDESL2KBAaHVJNbZWhmprwuCiXN9DHiKUGPuc311sqAI3XdOK6sB2y-pm4WFAshmxseXnfrPlfBt2-Y3Pc5gkU0jBrkSw~JQ599-f~Fh~rotuuvt0EezL~7ws5n-tLnwT7wzerTuGKAQ__" alt="GraFix Studio Logo" class="logo">
+            </a>
             <h1 class="heading">GraFix Studio</h1>
             <h2>✅ Certificate is Authorized</h2>
             <p><strong>Name:</strong> ${data.name}</p>
@@ -213,7 +219,9 @@
         })
         .catch(() => {
           output.innerHTML = `
-            <img src="https://github.com/grafix-studio/sample/blob/main/GFS%20Final.svg" alt="GraFix Studio Logo" class="logo">
+            <a href="https://www.grafixstudio.com">
+              <img src="https://media-hosting.imagekit.io/96a732a22e064bd7/GFS%20Final.svg?Expires=1840994572&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=vNMespXb9pBClqfCmal0SrWiQWEoXTvBXln4KtXihNv6orXUhKDIaxog-Fkr61PiaVhirPKDRdl4ZuNty4SWINdJtUgEOHfJ6sB9gcTwgqG4lQBZmmBJqnsU6MLyvhi~gGcAENQYLWXu5uUE8iGIiG8OExkKtq9lz~eZfwuemhPAAvWoSwZyDqhXj2zisW5MHI21~KWTFLjDESL2KBAaHVJNbZWhmprwuCiXN9DHiKUGPuc311sqAI3XdOK6sB2y-pm4WFAshmxseXnfrPlfBt2-Y3Pc5gkU0jBrkSw~JQ599-f~Fh~rotuuvt0EezL~7ws5n-tLnwT7wzerTuGKAQ__" alt="GraFix Studio Logo" class="logo">
+            </a>
             <h1 class="heading">GraFix Studio</h1>
             <h2 class='error'>❌ Invalid or Unauthorized Certificate</h2>
           `;
