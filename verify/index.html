@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Certificate Verification</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f2f2f2;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    h2 {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="output">
+    <p>Loading...</p>
+  </div>
+
+  <script>
+    // Extract ID from URL
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    const output = document.getElementById("output");
+
+    if (!id) {
+      output.innerHTML = "<p>No certificate ID provided.</p>";
+    } else {
+      fetch(`../certs/${id}.json`)
+        .then(res => {
+          if (!res.ok) throw new Error("Not found");
+          return res.json();
+        })
+        .then(data => {
+          output.innerHTML = `
+            <h2>✅ Certificate is Authorized</h2>
+            <p><strong>Name:</strong> ${data.name}</p>
+            <p><strong>Course:</strong> ${data.course}</p>
+            <p><strong>Issued on:</strong> ${data.issued_date}</p>
+            <p><strong>Status:</strong> ${data.status}</p>
+          `;
+        })
+        .catch(() => {
+          output.innerHTML = "<h2 style='color:red;'>❌ Invalid or Unauthorized Certificate</h2>";
+        });
+    }
+  </script>
+</body>
+</html>
